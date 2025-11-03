@@ -11,10 +11,9 @@ function buttonClick() {
 function inputText() {
     button.disabled = this.value.trim() === '';
 }
-export function getInputText() {
-    return input.value;
+function getInputText(inputElement = input) {
+    return inputElement.value;
 }
-
 function addElementToContainer(text) {
     const newParag = document.createElement('p');
     newParag.textContent = text;
@@ -27,6 +26,7 @@ function addElementToContainer(text) {
         container.append(newParag);
     }
 }
+
 function clearInput() {
     const input = document.querySelector('.text-field');
     input.value = '';
