@@ -1,11 +1,23 @@
-export function buttonClick(inputElement, buttonElement) {
-    const text = getInputText(inputElement);
-    addElementToContainer(text);
-    clearInput(buttonElement);
+
+export function createAndAppendElement(tag, text, parent) {
+    const element = document.createElement(tag);
+    element.textContent = text;
+    parent.appendChild(element);
+}
+
+export function buttonClick(inputElement, buttonElement, parent) {
+    return () => {
+        const text = getInputText(inputElement);
+        //console.log(text);
+        chekNumberParag(text, parent)
+        clearInput(inputElement, buttonElement);
+    }
 }
 
 export function inputText(buttonElement) {
-    buttonElement.disabled = value.trim() === '';
+    return (event) => {
+    buttonElement.disabled = event.target.value.trim() === '';
+    }
 }
 
 export function getInputText(inputElement) {
@@ -17,17 +29,14 @@ export function clearInput(inputElement, buttonElement) {
     buttonElement.disabled = true;
 }
 
-export function addElementToContainer(text) {
-    const newParag = document.createElement('p');
-    newParag.textContent = text;
-    const container = document.querySelector('.container');
-    const paragraph = container.querySelectorAll('p');
-    if (paragraph.length < 4) {
-        container.append(newParag);
+export function chekNumberParag(text, parent) {
+
+    const paragraph = parent.querySelectorAll('p');
+    console.log(paragraph);
+    if (paragraph.length < 5) {
+        createAndAppendElement('p', text, parent)
     } else {
-        container.querySelector('p').remove();
-        container.append(newParag);
+        parent.querySelector('p').remove();
+        createAndAppendElement('p', text, parent)
     }
 }
-
-export { buttonClick, inputText, getInputText, clearInput};
