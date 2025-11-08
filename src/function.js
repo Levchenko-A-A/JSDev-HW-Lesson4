@@ -8,7 +8,6 @@ export function createAndAppendElement(tag, text, parent) {
 export function buttonClick(inputElement, buttonElement, parent) {
     return () => {
         const text = getInputText(inputElement);
-        //console.log(text);
         chekNumberParag(text, parent)
         clearInput(inputElement, buttonElement);
     }
