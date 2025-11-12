@@ -8,9 +8,26 @@
   },
   "scripts": {
     "start": "node server.js",
-    "test": "jest"
+    "test": "jest",
+    "test:coverage": "jest --coverage"
   },
   "dependencies": {
     "node-static": "^0.7.11"
-  }
+  },
+  "name": "lesson4",
+  "version": "1.0.0",
+  "description": "Home Work JavaScript Developer. Basic. Lesson 4",
+  "main": "babel.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Levchenko-A-A/JSDev-HW-Lesson4.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Levchenko-A-A/JSDev-HW-Lesson4/issues"
+  },
+  "homepage": "https://github.com/Levchenko-A-A/JSDev-HW-Lesson4#readme"
 }

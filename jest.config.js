@@ -1,3 +1,4 @@
+/** @type {import { 'jest' }.Config} */
 /**
  * For a detailed explanation regarding each configuration property, visit:
  * https://jestjs.io/docs/configuration
@@ -7,7 +8,7 @@
 const config = {
   // All imported modules in your tests should be mocked automatically
   // automock: false,
-
+  
   // Stop running tests after `n` failures
   // bail: 0,
 
@@ -18,7 +19,7 @@ const config = {
   clearMocks: true,
 
   // Indicates whether the coverage information should be collected while executing the test
-  // collectCoverage: false,
+  collectCoverage: true,
 
   // An array of glob patterns indicating a set of files for which coverage information should be collected
   // collectCoverageFrom: undefined,
@@ -35,15 +36,21 @@ const config = {
   coverageProvider: "v8",
 
   // A list of reporter names that Jest uses when writing coverage reports
-  // coverageReporters: [
-  //   "json",
-  //   "text",
-  //   "lcov",
-  //   "clover"
-  // ],
+  coverageReporters: [
+    "json",
+    "text",
+    "lcov",
+    "clover"
+  ],
 
   // An object that configures minimum threshold enforcement for coverage results
-  // coverageThreshold: undefined,
+  coverageThreshold: {
+    global: {
+      branches: 60,
+      functions: 60,
+      lines: 60
+    }
+  },
 
   // A path to a custom dependency extractor
   // dependencyExtractor: undefined,
