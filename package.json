@@ -23,6 +23,9 @@
     "lint:fix": "prettier --write . && eslint . --fix",
     "prepare": "husky"
   },
+  "lint-staged": {
+    "src/**/*.js": "lint"
+  },
   "dependencies": {
     "node-static": "^0.7.11"
   },
@@ -41,9 +44,5 @@
   "bugs": {
     "url": "https://github.com/Levchenko-A-A/JSDev-HW-Lesson4/issues"
   },
-  "homepage": "https://github.com/Levchenko-A-A/JSDev-HW-Lesson4#readme",
-  "lint-staged": {
-    "*.js": "eslint --cache --fix",
-    "*.{js,css,md}": "prettier --write"
-  }
+  "homepage": "https://github.com/Levchenko-A-A/JSDev-HW-Lesson4#readme"
 }
