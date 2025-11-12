@@ -24,7 +24,8 @@
     "prepare": "husky"
   },
   "lint-staged": {
-    "src/**/*.js": "lint"
+    "*.js": "eslint --cache --fix",
+    "*.{css,md,yml,html}":"prettier --write"
   },
   "dependencies": {
     "node-static": "^0.7.11"
