@@ -1,7 +1,7 @@
-
 export function createAndAppendElement(tag, text, parent) {
   const element = document.createElement(tag);
   element.textContent = text;
+
   parent.appendChild(element);
 }
 
@@ -15,7 +15,6 @@ export function clearInput(inputElement, buttonElement) {
 }
 
 export function chekNumberParag(text, parent) {
-
   const paragraph = parent.querySelectorAll('p');
   console.log(paragraph);
   if (paragraph.length < 5) {

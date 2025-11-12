@@ -8,7 +8,7 @@
 const config = {
   // All imported modules in your tests should be mocked automatically
   // automock: false,
-  
+
   // Stop running tests after `n` failures
   // bail: 0,
 
@@ -33,23 +33,18 @@ const config = {
   // ],
 
   // Indicates which provider should be used to instrument code for coverage
-  coverageProvider: "v8",
+  coverageProvider: 'v8',
 
   // A list of reporter names that Jest uses when writing coverage reports
-  coverageReporters: [
-    "json",
-    "text",
-    "lcov",
-    "clover"
-  ],
+  coverageReporters: ['json', 'text', 'lcov', 'clover'],
 
   // An object that configures minimum threshold enforcement for coverage results
   coverageThreshold: {
     global: {
       branches: 60,
       functions: 60,
-      lines: 60
-    }
+      lines: 60,
+    },
   },
 
   // A path to a custom dependency extractor
