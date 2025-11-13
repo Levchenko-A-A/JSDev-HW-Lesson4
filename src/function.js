@@ -16,7 +16,6 @@ export function clearInput(inputElement, buttonElement) {
 
 export function chekNumberParag(text, parent) {
   const paragraph = parent.querySelectorAll('p');
-  console.log(paragraph);
   if (paragraph.length < 5) {
     createAndAppendElement('p', text, parent);
   } else {
