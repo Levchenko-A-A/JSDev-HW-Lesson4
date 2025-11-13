@@ -1,8 +1,8 @@
-const static = require('node-static');
+const staticNew = require('node-static');
 
 // Создаем экземпляр node-static сервера
 // Указываем папку, из которой раздавать файлы (например, текущая папка '.')
-const file = new static.Server('.', {
+const file = new staticNew.Server('.', {
   cache: 7200,
   gzip: true,
 });

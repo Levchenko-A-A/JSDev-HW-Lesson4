@@ -1,4 +1,4 @@
-import { createAndAppendElement, buttonClick, inputText } from './function.js';
+import {createAndAppendElement, buttonClick, inputText} from './function.js';
 
 const container = document.querySelector('.container');
 const input = document.createElement('input');

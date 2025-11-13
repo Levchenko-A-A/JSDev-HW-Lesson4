@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 
-import { createAndAppendElement, getInputText, clearInput, chekNumberParag } from './function';
+import {createAndAppendElement, getInputText, clearInput, chekNumberParag} from './function';
 describe('Тестирование функций', () => {
   describe('Проверка функции createAndAppendElement()', () => {
     test('Создание элемента с правильным ТЭГом', () => {
