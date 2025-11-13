@@ -7,13 +7,6 @@ import eslintConfigPrettier from 'eslint-config-prettier/flat';
 
 export default defineConfig([
   js.configs.recommended,
-
-  {
-    // ...google.rules,
-    // ...google.rules,
-    // 'require-jsdoc': 'off',
-    // 'max-len': ['error', {code: 120}],
-  },
   {
     files: ['**/*.{js,mjs,cjs}'],
     ...google,
