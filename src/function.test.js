@@ -2,7 +2,13 @@
  * @jest-environment jsdom
  */
 
-import {createAndAppendElement, getInputText, clearInput, chekNumberParag} from './function';
+import {
+  createAndAppendElement,
+  getInputText,
+  clearInput,
+  chekNumberParag,
+  inputText,
+} from './function';
 describe('Тестирование функций', () => {
   describe('Проверка функции createAndAppendElement()', () => {
     test('Создание элемента с правильным ТЭГом', () => {
@@ -124,6 +130,43 @@ describe('Тестирование функций', () => {
       expect(parent.querySelectorAll('p').length).toBe(5);
       expect(currentParagraphs).not.toEqual(initialParagraphs);
       expect(currentParagraphs[4]).toBe(newText);
+    });
+  });
+  describe('Проверка функции inputText()', () => {
+    it('Должна возвращать функцию', () => {
+      const buttonElement = document.createElement('button');
+      const result = inputText(buttonElement);
+      expect(typeof result).toBe('function');
+    });
+
+    it('Должна отключать кнопку при пустом значении', () => {
+      const buttonElement = document.createElement('button');
+      const inputElement = document.createElement('input');
+      inputElement.value = '';
+      const eventHandler = inputText(buttonElement);
+      const mockEvent = {target: inputElement};
+      eventHandler(mockEvent);
+      expect(buttonElement.disabled).toBe(true);
+    });
+
+    it('Должна включать кнопку при непустом значении', () => {
+      const buttonElement = document.createElement('button');
+      const inputElement = document.createElement('input');
+      inputElement.value = 'Текст';
+      const eventHandler = inputText(buttonElement);
+      const mockEvent = {target: inputElement};
+      eventHandler(mockEvent);
+      expect(buttonElement.disabled).toBe(false);
+    });
+
+    it('Должна отключать кнопку при значении только из пробелов', () => {
+      const buttonElement = document.createElement('button');
+      const inputElement = document.createElement('input');
+      inputElement.value = '   ';
+      const eventHandler = inputText(buttonElement);
+      const mockEvent = {target: inputElement};
+      eventHandler(mockEvent);
+      expect(buttonElement.disabled).toBe(true);
     });
   });
 });
