@@ -15,8 +15,8 @@ jobs:
 
       - name: Lint check
         run: |
-          npm run lint
+          npm run test
 
       - name: Lint check
         run: |
-          npm run test
+          npm run lint:fix
