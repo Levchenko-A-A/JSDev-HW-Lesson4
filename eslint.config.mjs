@@ -7,7 +7,7 @@ import eslintConfigPrettier from 'eslint-config-prettier/flat';
 
 export default defineConfig([
   {
-    ignores: ['docs/**', '**/.DS_Store', 'node_modules/**'],
+    ignores: ['docs/**', '**/.DS_Store', 'node_modules/**', 'coverage/**'],
   },
   js.configs.recommended,
   {
