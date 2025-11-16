@@ -1,5 +1,5 @@
 /**
- * Creates HTML element, set its text content and appends it to 
+ * Creates HTML element, set its text content and appends it to
  * the specified parent element
  * @param {string} tag - Tag name of the element to create
  * @param {string} text - Text content to set for the element
@@ -22,7 +22,7 @@ export function getInputText(inputElement) {
 
 /**
  * Clears the input element and disables the button element
- * @param {HTMLInputElement} inputElement - Input element to clear 
+ * @param {HTMLInputElement} inputElement - Input element to clear
  * @param {HTMLButtonElement} buttonElement - Button element to disable
  */
 export function clearInput(inputElement, buttonElement) {
@@ -48,7 +48,7 @@ export function chekNumberParag(text, parent) {
 
 /**
  * Creates a click handler function that processes input text and maneges paragraphs
- * @param {HTMLInputElement} inputElement - Input element to get text from 
+ * @param {HTMLInputElement} inputElement - Input element to get text from
  * @param {HTMLButtonElement} buttonElement - Button element to disable after processing
  * @param {HTMLElement} parent - Parent element for paragraph manegement
  * @returns {Function} Click handler function
