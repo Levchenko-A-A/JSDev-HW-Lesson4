@@ -1,18 +1,21 @@
 import js from '@eslint/js';
 import globals from 'globals';
-import {defineConfig} from 'eslint/config';
+import { defineConfig } from 'eslint/config';
 import jest from 'eslint-plugin-jest';
 import google from 'eslint-config-google';
 import eslintConfigPrettier from 'eslint-config-prettier/flat';
 
 export default defineConfig([
+  {
+    ignores: ['docs/**', '**/.DS_Store', 'node_modules/**'],
+  },
   js.configs.recommended,
   {
     files: ['**/*.{js,mjs,cjs}'],
     ...google,
     rules: {
       'require-jsdoc': 'off',
-      'max-len': ['error', {code: 120}],
+      'max-len': ['error', { code: 120 }],
     },
   },
   {
@@ -23,7 +26,7 @@ export default defineConfig([
       indent: ['error', 2], //                              Контролирует отступы. По умолчанию использует 2 пробела.
       'no-multi-spaces': 'error', //                        Запрещает множественные пробелы, кроме случаев выравнивания
       'space-in-parens': ['error', 'never'], //             Контролирует пробелы внутри скобок.
-      'no-multiple-empty-lines': ['error', {max: 2}], //  Ограничивает количество пустых строк подряд.
+      'no-multiple-empty-lines': ['error', { max: 2 }], //  Ограничивает количество пустых строк подряд.
       'prefer-const': 'error', //                           Требует использования const для переменных, которые не переопределяются.
       'no-use-before-define': 'error', //                   Запрещает использование переменных до их объявления.
     },
