@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1763398064919" clover="3.2.0">
-  <project timestamp="1763398064919" name="All files">
+<coverage generated="1763398159950" clover="3.2.0">
+  <project timestamp="1763398159950" name="All files">
     <metrics statements="73" coveredstatements="67" conditionals="8" coveredconditionals="8" methods="6" coveredmethods="5" elements="87" coveredelements="80" complexity="0" loc="73" ncloc="73" packages="1" files="1" classes="1"/>
     <file name="function.js" path="/Users/lev_a_a_iphone.ru/otus/js-bas-hw-four/JSDev-HW-Lesson4/src/function.js">
       <metrics statements="73" coveredstatements="67" conditionals="8" coveredconditionals="8" methods="6" coveredmethods="5"/>
