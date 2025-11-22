@@ -1,4 +1,4 @@
-import {createAndAppendElement, buttonClick, inputText} from './function.js';
+import {createAndAppendElement, getClickHandler, inputText} from './function.js';
 
 const container = document.querySelector('.container');
 const input = document.createElement('input');
@@ -19,5 +19,5 @@ container.append(button);
 createAndAppendElement('p', 'First Paragraph', container);
 createAndAppendElement('p', 'Second Paragraph', container);
 createAndAppendElement('p', 'Third Paragraph', container);
-button.addEventListener('click', buttonClick(input, button, container));
+button.addEventListener('click', getClickHandler(input, button, container));
 input.addEventListener('input', inputText(button));

@@ -53,7 +53,7 @@ export function chekNumberParag(text, parent) {
  * @param {HTMLElement} parent - Parent element for paragraph manegement
  * @returns {Function} Click handler function
  */
-export function buttonClick(inputElement, buttonElement, parent) {
+export function getClickHandler(inputElement, buttonElement, parent) {
   return () => {
     const text = getInputText(inputElement);
     chekNumberParag(text, parent);
